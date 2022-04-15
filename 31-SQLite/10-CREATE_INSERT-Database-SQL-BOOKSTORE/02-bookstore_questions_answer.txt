@@ -1,0 +1,119 @@
+/*
+1) Tüm kitap isimlerini yazar isimleri ile birlikte getiren bir sorgu yazınız?
+2) Tüm kitap isimlerini yayınevleri ile birlikte getiren bir sorgu yazınız?
+3) Tüm yayınevleri tarafından basılan kitapların isimlerini yayınevleri ile birlikte getiren bir sorgu yazınız?
+4) 'Anı' türündeki tüm kitapların isimlerini getiren bir sorgu yazınız?
+5) 'Büyük Doğu Yayınları' na ait tüm kitapların isimlerini getiren bir sorgu  yazınız?
+6) 'Hikaye' türünde kitap yazan yazarların isimlerini getiren bir sorgu yazınız?
+7) 'Necip Fazıl Kısakürek'e ait kitapların türlerini getiren bir sorgu yazını?
+8) 'Hikaye' VEYA 'Şiir' türünde kitap yazan yazarların isimlerini getiren bir soru yazınız?
+9) En pahalı kitabın türünü getiren bir sorgu yazınız?
+10) 'TR' dışında diğer ülkelerde basılan kitapların isimlerini, yazarlarını, yayınevlerini ve fiyatlarını getiren bir sorgu yazınız?
+11) 'Hikaye' türünde yazılmış olan en ucuz kitabın yayınevini getiren bir sorgu yazınız?
+12) 'Can Yayınları' tarafından basılan en ucuz kitabın yazarının adını getiren bir sorgu yazınız?
+*/
+
+--1-----------------------------------------------
+SELECT DISTINCT book_name, author_name
+FROM books B
+LEFT JOIN authors A
+ON B.author_id = A.author_id
+
+SELECT DISTINCT book_name, author_name
+FROM books B
+INNER JOIN authors A
+ON B.author_id = A.author_id
+
+--2-----------------------------------------------
+SELECT DISTINCT book_name, publisher_name
+FROM books B
+LEFT JOIN publishers P
+ON B.publisher_id = P.publisher_id
+
+--3-----------------------------------------------
+SELECT DISTINCT book_name, publisher_name
+FROM books B
+RIGHT JOIN publishers P
+ON B.publisher_id = P.publisher_id
+
+--4-----------------------------------------------
+SELECT DISTINCT book_name
+FROM books B
+LEFT JOIN book_types T
+ON B.book_type = T.type_id
+WHERE T.book_type = 'Anı'
+
+--5-----------------------------------------------
+SELECT DISTINCT book_name
+FROM books B
+LEFT JOIN publishers P
+ON B.publisher_id = P.publisher_id
+WHERE P.publisher_name = 'Büyük Doğu Yayınları'
+
+--6-----------------------------------------------
+SELECT author_name
+FROM books B
+LEFT JOIN book_types T
+ON B.book_type = T.type_id
+LEFT JOIN authors A
+ON B.author_id = A.author_id
+WHERE T.book_type = 'Hikaye'
+
+--7-----------------------------------------------
+SELECT T.book_type
+FROM books B
+LEFT JOIN authors A
+ON B.author_id = A.author_id
+LEFT JOIN book_types T
+ON B.book_type = T.type_id
+WHERE A.author_name LIKE '%Kısakürek'
+
+--8-----------------------------------------------
+SELECT DISTINCT author_name
+FROM book_types T
+LEFT JOIN books B
+ON T.type_id= B.book_type
+LEFT JOIN authors A
+ON B.author_id = A.author_id
+WHERE T.book_type IN ('Anı', 'Hikaye')
+
+--9-----------------------------------------------
+SELECT T.book_type
+FROM book_types T
+INNER JOIN books B
+ON T.type_id = B.book_type
+WHERE price = (
+				SELECT TOP 1 price
+				FROM books
+				ORDER BY price DESC
+			  )
+
+--10-----------------------------------------------
+SELECT book_name, A.author_name, P.publisher_name, price
+FROM books B
+LEFT JOIN authors A
+ON B.author_id = A.author_id
+LEFT JOIN publishers P
+ON B.publisher_id = P.publisher_id
+WHERE country <> 'TR'
+
+--11-----------------------------------------------
+SELECT TOP 1 P.publisher_name
+FROM book_types T
+LEFT JOIN books B
+ON T.type_id= B.book_type
+LEFT JOIN publishers P
+ON B.publisher_id = P.publisher_id
+WHERE T.book_type = 'Hikaye'
+ORDER BY price
+
+
+--12-----------------------------------------------
+SELECT TOP 1 A.author_name
+FROM books B
+LEFT JOIN authors A
+ON B.author_id = A.author_id
+LEFT JOIN publishers P
+ON B.publisher_id = P.publisher_id
+WHERE P.publisher_name = 'Can yayınları'
+ORDER BY price

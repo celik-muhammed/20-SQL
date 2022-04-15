@@ -1,0 +1,14 @@
+arkadaşlar aşağıdaki sorular
+
+1) Tüm kitap isimlerini yazar isimleri ile birlikte getiren bir sorgu yazınız?
+2) Tüm kitap isimlerini yayınevleri ile birlikte getiren bir sorgu yazınız?
+3) Tüm yayınevleri tarafından basılan kitapların isimlerini yayınevleri ile birlikte getiren bir sorgu yazınız?
+4) 'Anı' türündeki tüm kitapların isimlerini getiren bir sorgu yazınız?
+5) 'Büyük Doğu Yayınları' na ait tüm kitapların isimlerini getiren bir sorgu  yazınız?
+6) 'Hikaye' türünde kitap yazan yazarların isimlerini getiren bir sorgu yazınız?
+7) 'Necip Fazıl Kısakürek'e ait kitapların türlerini getiren bir sorgu yazını?
+8) 'Hikaye' VEYA 'Şiir' türünde kitap yazan yazarların isimlerini getiren bir soru yazınız?
+9) En pahalı kitabın türünü getiren bir sorgu yazınız?
+10) 'TR' dışında diğer ülkelerde basılan kitapların isimlerini, yazarlarını, yayınevlerini ve fiyatlarını getiren bir sorgu yazınız?
+11) 'Hikaye' türünde yazılmış olan en ucuz kitabın yayınevini getiren bir sorgu yazınız?
+12) 'Can Yayınları' tarafından basılan en ucuz kitabın yazarının adını getiren bir sorgu yazınız?

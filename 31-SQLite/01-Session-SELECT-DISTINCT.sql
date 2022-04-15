@@ -24,4 +24,3 @@ DISTINCT
  /* Query the composer information in the tracks table (WITHOUT REPEAT) -
 	tracks tablosundaki composer bilgileri sorgulayınız (TEKRARSIZ)*/
  SELECT DISTINCT Composer FROM tracks;
- 

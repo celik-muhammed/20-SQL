@@ -1,0 +1,30 @@
+--CREATE DATABASE ETRADE;
+
+USE [ETRADE]
+GO
+
+/****** Object:  Table [dbo].[customers]    Script Date:  ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[customers](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[CUSTOMERNAME] [varchar](50) NULL,
+	[CITY] [varchar](50) NULL,
+	[BIRTHDATE] [date] NULL,
+	[DISTRICT] [varchar](50) NULL,
+	[GENDER] [varchar](1) NULL,
+	[NATION] [varchar](50) NULL,
+ CONSTRAINT [PK_customers] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, 
+		IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, 
+		ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+

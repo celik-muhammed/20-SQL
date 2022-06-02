@@ -7,13 +7,20 @@ PRAGMA foreign_keys = off;
 BEGIN TRANSACTION;
 
 -- Table: albums
-CREATE TABLE "albums"
-(
-    [AlbumId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    [Title] NVARCHAR(160)  NOT NULL,
-    [ArtistId] INTEGER  NOT NULL,
-    FOREIGN KEY ([ArtistId]) REFERENCES "artists" ([ArtistId]) 
-		ON DELETE NO ACTION ON UPDATE NO ACTION
+CREATE TABLE "albums"
+
+(
+
+    [AlbumId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+
+    [Title] NVARCHAR(160)  NOT NULL,
+
+    [ArtistId] INTEGER  NOT NULL,
+
+    FOREIGN KEY ([ArtistId]) REFERENCES "artists" ([ArtistId]) 
+
+		ON DELETE NO ACTION ON UPDATE NO ACTION
+
 );
 INSERT INTO albums (AlbumId, Title, ArtistId) VALUES (1, 'For Those About To Rock We Salute You', 1);
 INSERT INTO albums (AlbumId, Title, ArtistId) VALUES (2, 'Balls to the Wall', 2);
@@ -364,10 +371,14 @@ INSERT INTO albums (AlbumId, Title, ArtistId) VALUES (346, 'Mozart: Chamber Musi
 INSERT INTO albums (AlbumId, Title, ArtistId) VALUES (347, 'Koyaanisqatsi (Soundtrack from the Motion Picture)', 275);
 
 -- Table: artists
-CREATE TABLE "artists"
-(
-    [ArtistId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    [Name] NVARCHAR(120)
+CREATE TABLE "artists"
+
+(
+
+    [ArtistId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+
+    [Name] NVARCHAR(120)
+
 );
 INSERT INTO artists (ArtistId, Name) VALUES (1, 'AC/DC');
 INSERT INTO artists (ArtistId, Name) VALUES (2, 'Accept');
@@ -646,23 +657,40 @@ INSERT INTO artists (ArtistId, Name) VALUES (274, 'Nash Ensemble');
 INSERT INTO artists (ArtistId, Name) VALUES (275, 'Philip Glass Ensemble');
 
 -- Table: customers
-CREATE TABLE "customers"
-(
-    [CustomerId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    [FirstName] NVARCHAR(40)  NOT NULL,
-    [LastName] NVARCHAR(20)  NOT NULL,
-    [Company] NVARCHAR(80),
-    [Address] NVARCHAR(70),
-    [City] NVARCHAR(40),
-    [State] NVARCHAR(40),
-    [Country] NVARCHAR(40),
-    [PostalCode] NVARCHAR(10),
-    [Phone] NVARCHAR(24),
-    [Fax] NVARCHAR(24),
-    [Email] NVARCHAR(60)  NOT NULL,
-    [SupportRepId] INTEGER,
-    FOREIGN KEY ([SupportRepId]) REFERENCES "employees" ([EmployeeId]) 
-		ON DELETE NO ACTION ON UPDATE NO ACTION
+CREATE TABLE "customers"
+
+(
+
+    [CustomerId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+
+    [FirstName] NVARCHAR(40)  NOT NULL,
+
+    [LastName] NVARCHAR(20)  NOT NULL,
+
+    [Company] NVARCHAR(80),
+
+    [Address] NVARCHAR(70),
+
+    [City] NVARCHAR(40),
+
+    [State] NVARCHAR(40),
+
+    [Country] NVARCHAR(40),
+
+    [PostalCode] NVARCHAR(10),
+
+    [Phone] NVARCHAR(24),
+
+    [Fax] NVARCHAR(24),
+
+    [Email] NVARCHAR(60)  NOT NULL,
+
+    [SupportRepId] INTEGER,
+
+    FOREIGN KEY ([SupportRepId]) REFERENCES "employees" ([EmployeeId]) 
+
+		ON DELETE NO ACTION ON UPDATE NO ACTION
+
 );
 INSERT INTO customers (CustomerId, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId) VALUES (1, 'Luís', 'Gonçalves', 'Embraer - Empresa Brasileira de Aeronáutica S.A.', 'Av. Brigadeiro Faria Lima, 2170', 'São José dos Campos', 'SP', 'Brazil', '12227-000', '+55 (12) 3923-5555', '+55 (12) 3923-5566', 'luisg@embraer.com.br', 3);
 INSERT INTO customers (CustomerId, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId) VALUES (2, 'Leonie', 'Köhler', NULL, 'Theodor-Heuss-Straße 34', 'Stuttgart', NULL, 'Germany', '70174', '+49 0711 2842222', NULL, 'leonekohler@surfeu.de', 5);
@@ -725,25 +753,44 @@ INSERT INTO customers (CustomerId, FirstName, LastName, Company, Address, City, 
 INSERT INTO customers (CustomerId, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId) VALUES (59, 'Puja', 'Srivastava', NULL, '3,Raj Bhavan Road', 'Bangalore', NULL, 'India', '560001', '+91 080 22289999', NULL, 'puja_srivastava@yahoo.in', 3);
 
 -- Table: employees
-CREATE TABLE "employees"
-(
-    [EmployeeId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    [LastName] NVARCHAR(20)  NOT NULL,
-    [FirstName] NVARCHAR(20)  NOT NULL,
-    [Title] NVARCHAR(30),
-    [ReportsTo] INTEGER,
-    [BirthDate] DATETIME,
-    [HireDate] DATETIME,
-    [Address] NVARCHAR(70),
-    [City] NVARCHAR(40),
-    [State] NVARCHAR(40),
-    [Country] NVARCHAR(40),
-    [PostalCode] NVARCHAR(10),
-    [Phone] NVARCHAR(24),
-    [Fax] NVARCHAR(24),
-    [Email] NVARCHAR(60),
-    FOREIGN KEY ([ReportsTo]) REFERENCES "employees" ([EmployeeId]) 
-		ON DELETE NO ACTION ON UPDATE NO ACTION
+CREATE TABLE "employees"
+
+(
+
+    [EmployeeId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+
+    [LastName] NVARCHAR(20)  NOT NULL,
+
+    [FirstName] NVARCHAR(20)  NOT NULL,
+
+    [Title] NVARCHAR(30),
+
+    [ReportsTo] INTEGER,
+
+    [BirthDate] DATETIME,
+
+    [HireDate] DATETIME,
+
+    [Address] NVARCHAR(70),
+
+    [City] NVARCHAR(40),
+
+    [State] NVARCHAR(40),
+
+    [Country] NVARCHAR(40),
+
+    [PostalCode] NVARCHAR(10),
+
+    [Phone] NVARCHAR(24),
+
+    [Fax] NVARCHAR(24),
+
+    [Email] NVARCHAR(60),
+
+    FOREIGN KEY ([ReportsTo]) REFERENCES "employees" ([EmployeeId]) 
+
+		ON DELETE NO ACTION ON UPDATE NO ACTION
+
 );
 INSERT INTO employees (EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email) VALUES (1, 'Adams', 'Andrew', 'General Manager', NULL, '1962-02-18 00:00:00', '2002-08-14 00:00:00', '11120 Jasper Ave NW', 'Edmonton', 'AB', 'Canada', 'T5K 2N1', '+1 (780) 428-9482', '+1 (780) 428-3457', 'andrew@chinookcorp.com');
 INSERT INTO employees (EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email) VALUES (2, 'Edwards', 'Nancy', 'Sales Manager', 1, '1958-12-08 00:00:00', '2002-05-01 00:00:00', '825 8 Ave SW', 'Calgary', 'AB', 'Canada', 'T2P 2T3', '+1 (403) 262-3443', '+1 (403) 262-3322', 'nancy@chinookcorp.com');
@@ -755,10 +802,14 @@ INSERT INTO employees (EmployeeId, LastName, FirstName, Title, ReportsTo, BirthD
 INSERT INTO employees (EmployeeId, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email) VALUES (8, 'Callahan', 'Laura', 'IT Staff', 6, '1968-01-09 00:00:00', '2004-03-04 00:00:00', '923 7 ST NW', 'Lethbridge', 'AB', 'Canada', 'T1H 1Y8', '+1 (403) 467-3351', '+1 (403) 467-8772', 'laura@chinookcorp.com');
 
 -- Table: genres
-CREATE TABLE "genres"
-(
-    [GenreId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    [Name] NVARCHAR(120)
+CREATE TABLE "genres"
+
+(
+
+    [GenreId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+
+    [Name] NVARCHAR(120)
+
 );
 INSERT INTO genres (GenreId, Name) VALUES (1, 'Rock');
 INSERT INTO genres (GenreId, Name) VALUES (2, 'Jazz');
@@ -787,17 +838,28 @@ INSERT INTO genres (GenreId, Name) VALUES (24, 'Classical');
 INSERT INTO genres (GenreId, Name) VALUES (25, 'Opera');
 
 -- Table: invoice_items
-CREATE TABLE "invoice_items"
-(
-    [InvoiceLineId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    [InvoiceId] INTEGER  NOT NULL,
-    [TrackId] INTEGER  NOT NULL,
-    [UnitPrice] NUMERIC(10,2)  NOT NULL,
-    [Quantity] INTEGER  NOT NULL,
-    FOREIGN KEY ([InvoiceId]) REFERENCES "invoices" ([InvoiceId]) 
-		ON DELETE NO ACTION ON UPDATE NO ACTION,
-    FOREIGN KEY ([TrackId]) REFERENCES "tracks" ([TrackId]) 
-		ON DELETE NO ACTION ON UPDATE NO ACTION
+CREATE TABLE "invoice_items"
+
+(
+
+    [InvoiceLineId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+
+    [InvoiceId] INTEGER  NOT NULL,
+
+    [TrackId] INTEGER  NOT NULL,
+
+    [UnitPrice] NUMERIC(10,2)  NOT NULL,
+
+    [Quantity] INTEGER  NOT NULL,
+
+    FOREIGN KEY ([InvoiceId]) REFERENCES "invoices" ([InvoiceId]) 
+
+		ON DELETE NO ACTION ON UPDATE NO ACTION,
+
+    FOREIGN KEY ([TrackId]) REFERENCES "tracks" ([TrackId]) 
+
+		ON DELETE NO ACTION ON UPDATE NO ACTION
+
 );
 INSERT INTO invoice_items (InvoiceLineId, InvoiceId, TrackId, UnitPrice, Quantity) VALUES (1, 1, 2, 0.99, 1);
 INSERT INTO invoice_items (InvoiceLineId, InvoiceId, TrackId, UnitPrice, Quantity) VALUES (2, 1, 4, 0.99, 1);
@@ -3041,19 +3103,32 @@ INSERT INTO invoice_items (InvoiceLineId, InvoiceId, TrackId, UnitPrice, Quantit
 INSERT INTO invoice_items (InvoiceLineId, InvoiceId, TrackId, UnitPrice, Quantity) VALUES (2240, 412, 3177, 1.99, 1);
 
 -- Table: invoices
-CREATE TABLE "invoices"
-(
-    [InvoiceId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    [CustomerId] INTEGER  NOT NULL,
-    [InvoiceDate] DATETIME  NOT NULL,
-    [BillingAddress] NVARCHAR(70),
-    [BillingCity] NVARCHAR(40),
-    [BillingState] NVARCHAR(40),
-    [BillingCountry] NVARCHAR(40),
-    [BillingPostalCode] NVARCHAR(10),
-    [Total] NUMERIC(10,2)  NOT NULL,
-    FOREIGN KEY ([CustomerId]) REFERENCES "customers" ([CustomerId]) 
-		ON DELETE NO ACTION ON UPDATE NO ACTION
+CREATE TABLE "invoices"
+
+(
+
+    [InvoiceId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+
+    [CustomerId] INTEGER  NOT NULL,
+
+    [InvoiceDate] DATETIME  NOT NULL,
+
+    [BillingAddress] NVARCHAR(70),
+
+    [BillingCity] NVARCHAR(40),
+
+    [BillingState] NVARCHAR(40),
+
+    [BillingCountry] NVARCHAR(40),
+
+    [BillingPostalCode] NVARCHAR(10),
+
+    [Total] NUMERIC(10,2)  NOT NULL,
+
+    FOREIGN KEY ([CustomerId]) REFERENCES "customers" ([CustomerId]) 
+
+		ON DELETE NO ACTION ON UPDATE NO ACTION
+
 );
 INSERT INTO invoices (InvoiceId, CustomerId, InvoiceDate, BillingAddress, BillingCity, BillingState, BillingCountry, BillingPostalCode, Total) VALUES (1, 2, '2009-01-01 00:00:00', 'Theodor-Heuss-Straße 34', 'Stuttgart', NULL, 'Germany', '70174', 1.98);
 INSERT INTO invoices (InvoiceId, CustomerId, InvoiceDate, BillingAddress, BillingCity, BillingState, BillingCountry, BillingPostalCode, Total) VALUES (2, 4, '2009-01-02 00:00:00', 'Ullevålsveien 14', 'Oslo', NULL, 'Norway', '0171', 3.96);
@@ -3469,10 +3544,14 @@ INSERT INTO invoices (InvoiceId, CustomerId, InvoiceDate, BillingAddress, Billin
 INSERT INTO invoices (InvoiceId, CustomerId, InvoiceDate, BillingAddress, BillingCity, BillingState, BillingCountry, BillingPostalCode, Total) VALUES (412, 58, '2013-12-22 00:00:00', '12,Community Centre', 'Delhi', NULL, 'India', '110017', 1.99);
 
 -- Table: media_types
-CREATE TABLE "media_types"
-(
-    [MediaTypeId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    [Name] NVARCHAR(120)
+CREATE TABLE "media_types"
+
+(
+
+    [MediaTypeId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+
+    [Name] NVARCHAR(120)
+
 );
 INSERT INTO media_types (MediaTypeId, Name) VALUES (1, 'MPEG audio file');
 INSERT INTO media_types (MediaTypeId, Name) VALUES (2, 'Protected AAC audio file');
@@ -3481,15 +3560,24 @@ INSERT INTO media_types (MediaTypeId, Name) VALUES (4, 'Purchased AAC audio file
 INSERT INTO media_types (MediaTypeId, Name) VALUES (5, 'AAC audio file');
 
 -- Table: playlist_track
-CREATE TABLE "playlist_track"
-(
-    [PlaylistId] INTEGER  NOT NULL,
-    [TrackId] INTEGER  NOT NULL,
-    CONSTRAINT [PK_PlaylistTrack] PRIMARY KEY  ([PlaylistId], [TrackId]),
-    FOREIGN KEY ([PlaylistId]) REFERENCES "playlists" ([PlaylistId]) 
-		ON DELETE NO ACTION ON UPDATE NO ACTION,
-    FOREIGN KEY ([TrackId]) REFERENCES "tracks" ([TrackId]) 
-		ON DELETE NO ACTION ON UPDATE NO ACTION
+CREATE TABLE "playlist_track"
+
+(
+
+    [PlaylistId] INTEGER  NOT NULL,
+
+    [TrackId] INTEGER  NOT NULL,
+
+    CONSTRAINT [PK_PlaylistTrack] PRIMARY KEY  ([PlaylistId], [TrackId]),
+
+    FOREIGN KEY ([PlaylistId]) REFERENCES "playlists" ([PlaylistId]) 
+
+		ON DELETE NO ACTION ON UPDATE NO ACTION,
+
+    FOREIGN KEY ([TrackId]) REFERENCES "tracks" ([TrackId]) 
+
+		ON DELETE NO ACTION ON UPDATE NO ACTION
+
 );
 INSERT INTO playlist_track (PlaylistId, TrackId) VALUES (1, 3402);
 INSERT INTO playlist_track (PlaylistId, TrackId) VALUES (1, 3389);
@@ -12208,10 +12296,14 @@ INSERT INTO playlist_track (PlaylistId, TrackId) VALUES (17, 3290);
 INSERT INTO playlist_track (PlaylistId, TrackId) VALUES (18, 597);
 
 -- Table: playlists
-CREATE TABLE "playlists"
-(
-    [PlaylistId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    [Name] NVARCHAR(120)
+CREATE TABLE "playlists"
+
+(
+
+    [PlaylistId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+
+    [Name] NVARCHAR(120)
+
 );
 INSERT INTO playlists (PlaylistId, Name) VALUES (1, 'Music');
 INSERT INTO playlists (PlaylistId, Name) VALUES (2, 'Movies');
@@ -12237,23 +12329,40 @@ CREATE TABLE stocks
                (date text, trans text, symbol text, qty real, price real);
 
 -- Table: tracks
-CREATE TABLE "tracks"
-(
-    [TrackId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    [Name] NVARCHAR(200)  NOT NULL,
-    [AlbumId] INTEGER,
-    [MediaTypeId] INTEGER  NOT NULL,
-    [GenreId] INTEGER,
-    [Composer] NVARCHAR(220),
-    [Milliseconds] INTEGER  NOT NULL,
-    [Bytes] INTEGER,
-    [UnitPrice] NUMERIC(10,2)  NOT NULL,
-    FOREIGN KEY ([AlbumId]) REFERENCES "albums" ([AlbumId]) 
-		ON DELETE NO ACTION ON UPDATE NO ACTION,
-    FOREIGN KEY ([GenreId]) REFERENCES "genres" ([GenreId]) 
-		ON DELETE NO ACTION ON UPDATE NO ACTION,
-    FOREIGN KEY ([MediaTypeId]) REFERENCES "media_types" ([MediaTypeId]) 
-		ON DELETE NO ACTION ON UPDATE NO ACTION
+CREATE TABLE "tracks"
+
+(
+
+    [TrackId] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+
+    [Name] NVARCHAR(200)  NOT NULL,
+
+    [AlbumId] INTEGER,
+
+    [MediaTypeId] INTEGER  NOT NULL,
+
+    [GenreId] INTEGER,
+
+    [Composer] NVARCHAR(220),
+
+    [Milliseconds] INTEGER  NOT NULL,
+
+    [Bytes] INTEGER,
+
+    [UnitPrice] NUMERIC(10,2)  NOT NULL,
+
+    FOREIGN KEY ([AlbumId]) REFERENCES "albums" ([AlbumId]) 
+
+		ON DELETE NO ACTION ON UPDATE NO ACTION,
+
+    FOREIGN KEY ([GenreId]) REFERENCES "genres" ([GenreId]) 
+
+		ON DELETE NO ACTION ON UPDATE NO ACTION,
+
+    FOREIGN KEY ([MediaTypeId]) REFERENCES "media_types" ([MediaTypeId]) 
+
+		ON DELETE NO ACTION ON UPDATE NO ACTION
+
 );
 INSERT INTO tracks (TrackId, Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice) VALUES (1, 'For Those About To Rock (We Salute You)', 1, 1, 1, 'Angus Young, Malcolm Young, Brian Johnson', 343719, 11170334, 0.99);
 INSERT INTO tracks (TrackId, Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice) VALUES (2, 'Balls to the Wall', 2, 2, 1, NULL, 342562, 5510424, 0.99);

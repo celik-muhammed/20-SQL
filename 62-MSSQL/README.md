@@ -1,3 +1,5 @@
+# SQL Server Sample Database (Create-Insert-Drop)
+
 01. [x] [01-chinook-SQL-Server-Sample-Database](./01-chinook-SQL-Server-Sample-Database)
 02. [x] [02-HR-SQL-Server-Sample-Database](./02-HR-SQL-Server-Sample-Database)
 03. [x] [03-araclar-SQL-Server-Sample-Database](./03-araclar-SQL-Server-Sample-Database)
@@ -9,10 +11,14 @@
 09. [x] [09-LibDatabase-SQL-Server-Sample-Database](./09-LibDatabase-SQL-Server-Sample-Database)
 10. [x] [chinook](./chinook)
 
+<br>
 
+# SQL Server Query
 
+00. [x] [01-Session-SELECT-DISTINCT](./01-Session-SELECT-DISTINCT.sql)
+02. [x] [02-Session-WHERE-LIMIT-ORDER BY-(AND,OR,NOT)-IN](./02-Session-WHERE-LIMIT-ORDER%20BY-(AND%2COR%2CNOT)-IN.sql)
 
-
+<br>
 [<img src="https://docs.microsoft.com/en-us/sql/ssms/media/sql-server-management-studio-ssms/ssms.png?view=sql-server-ver15" width=700, height=200 />](https://docs.microsoft.com/en-us/sql/ssms/media/sql-server-management-studio-ssms/ssms.png?view=sql-server-ver15)
 
 [Microsoft SQL documentation CLICK](https://docs.microsoft.com/tr-tr/sql/?view=sql-server-ver15)

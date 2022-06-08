@@ -1,13 +1,13 @@
 
 00. [ ] [Go to Main Page - 00-Index-of-GitHub-Public-Projects-Repository-Logs][mainPage]
 
-# [SQLite Documents](./61-SQLite/)
+# [doc: SQLite Documents](./61-SQLite/)
 
-# [MSSQL Documents](./62-MSSQL/)
+# [doc: MSSQL Documents](./62-MSSQL/)
 
 # [Assignments](./68-Assignments/)
 
-# [SQL-Database-Graphics](./69-SQL-Database-Graphics/)
+# [chart: SQL-Database-Graphics](./69-SQL-Database-Graphics/)
 
 [SQLite: What Is SQLite](https://www.sqlitetutorial.net/what-is-sqlite/)
 

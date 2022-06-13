@@ -10,8 +10,8 @@
 
 ### [SQLite Sample Databases - Queries](./61-SQLite/)
 
-##### [chart: SQL-Database-Graphics](./69-SQL-Database-Graphics/)
+#### [MSSQL: SQL Server technical documentation](https://docs.microsoft.com/tr-tr/sql/sql-server/?view=sql-server-ver15)
 
 #### [SQLite: What Is SQLite](https://www.sqlitetutorial.net/what-is-sqlite/)
 
-#### [MSSQL: SQL Server technical documentation](https://docs.microsoft.com/tr-tr/sql/sql-server/?view=sql-server-ver15)
+##### [chart: SQL-Database-Graphics](./69-SQL-Database-Graphics/)

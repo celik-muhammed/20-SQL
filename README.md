@@ -4,14 +4,14 @@
 [mainPage]: https://github.com/celik-muhammed
 
 
-# [Assignments](./68-Assignments/)
+# [MSSQL Sample Code: Assignments](./68-Assignments/)
 
-# [doc: SQLite Documents](./61-SQLite/)
+### [MS SQL Server Sample Databases - Queries](./62-MSSQL/)
 
-# [doc: MSSQL Documents](./62-MSSQL/)
+### [SQLite Sample Databases - Queries](./61-SQLite/)
 
-# [chart: SQL-Database-Graphics](./69-SQL-Database-Graphics/)
+##### [chart: SQL-Database-Graphics](./69-SQL-Database-Graphics/)
 
-[SQLite: What Is SQLite](https://www.sqlitetutorial.net/what-is-sqlite/)
+#### [SQLite: What Is SQLite](https://www.sqlitetutorial.net/what-is-sqlite/)
 
-[MSSQL: SQL Server technical documentation](https://docs.microsoft.com/tr-tr/sql/sql-server/?view=sql-server-ver15)
+#### [MSSQL: SQL Server technical documentation](https://docs.microsoft.com/tr-tr/sql/sql-server/?view=sql-server-ver15)

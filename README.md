@@ -1,6 +1,8 @@
 
 00. [ ] [Go to Main Page - 00-Index-of-GitHub-Public-Projects-Repository-Logs][mainPage]
 
+[mainPage]: https://github.com/celik-muhammed
+
 # [doc: SQLite Documents](./61-SQLite/)
 
 # [doc: MSSQL Documents](./62-MSSQL/)

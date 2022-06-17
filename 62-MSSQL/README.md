@@ -1,8 +1,8 @@
 # SQL Server Sample Database (Create-Insert-Drop)
 
 
-01. [x] [01-SampleRetail_3-SQL-Server-Sample-Database](./06-SampleRetail_3-SQL-Server-Sample-Database)
-02. [x] [02-BikeStores-SQL-Server-Sample-Database](./07-BikeStores-SQL-Server-Sample-Database)
+01. [x] [01-SampleRetail_3-SQL-Server-Sample-Database](./01-SampleRetail_3-SQL-Server-Sample-Database)
+02. [x] [02-LibDatabase-SQL-Server-Sample-Database](./02-LibDatabase-SQL-Server-Sample-Database)
 03. [x] [03-Departments-SQL-Server-Sample-Database](./03-Departments-SQL-Server-Sample-Database)
 
 <!-- 01. [x] [01-chinook-SQL-Server-Sample-Database](./01-chinook-SQL-Server-Sample-Database) -->

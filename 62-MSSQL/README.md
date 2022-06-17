@@ -1,15 +1,19 @@
 # SQL Server Sample Database (Create-Insert-Drop)
 
-01. [x] [01-chinook-SQL-Server-Sample-Database](./01-chinook-SQL-Server-Sample-Database)
-02. [x] [02-HR-SQL-Server-Sample-Database](./02-HR-SQL-Server-Sample-Database)
-03. [x] [03-araclar-SQL-Server-Sample-Database](./03-araclar-SQL-Server-Sample-Database)
-04. [x] [04-books-SQL-Server-Sample-Database](./04-books-SQL-Server-Sample-Database)
-05. [x] [05-bookstore-SQL-Server-Sample-Database](./05-bookstore-SQL-Server-Sample-Database)
-06. [x] [06-SampleRetail_3-SQL-Server-Sample-Database](./06-SampleRetail_3-SQL-Server-Sample-Database)
-07. [x] [07-BikeStores-SQL-Server-Sample-Database](./07-BikeStores-SQL-Server-Sample-Database)
-08. [x] [08-ETRADE-SQL-Server-Sample-Database](./08-ETRADE-SQL-Server-Sample-Database)
-09. [x] [09-LibDatabase-SQL-Server-Sample-Database](./09-LibDatabase-SQL-Server-Sample-Database)
-10. [x] [chinook](./chinook)
+
+01. [x] [06-SampleRetail_3-SQL-Server-Sample-Database](./06-SampleRetail_3-SQL-Server-Sample-Database)
+02. [x] [07-BikeStores-SQL-Server-Sample-Database](./07-BikeStores-SQL-Server-Sample-Database)
+03. [x] [03-Departments-SQL-Server-Sample-Database](./03-Departments-SQL-Server-Sample-Database)
+
+<!-- 01. [x] [01-chinook-SQL-Server-Sample-Database](./01-chinook-SQL-Server-Sample-Database) -->
+<!-- 02. [x] [02-HR-SQL-Server-Sample-Database](./02-HR-SQL-Server-Sample-Database) -->
+<!-- 03. [x] [03-araclar-SQL-Server-Sample-Database](./03-araclar-SQL-Server-Sample-Database) -->
+<!-- 04. [x] [04-books-SQL-Server-Sample-Database](./04-books-SQL-Server-Sample-Database) -->
+<!-- 05. [x] [05-bookstore-SQL-Server-Sample-Database](./05-bookstore-SQL-Server-Sample-Database) -->
+
+<!-- 08. [x] [08-ETRADE-SQL-Server-Sample-Database](./08-ETRADE-SQL-Server-Sample-Database) -->
+<!-- 09. [x] [09-LibDatabase-SQL-Server-Sample-Database](./09-LibDatabase-SQL-Server-Sample-Database) -->
+<!-- 10. [x] [chinook](./chinook) -->
 
 
 

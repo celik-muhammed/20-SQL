@@ -4,11 +4,11 @@
 [mainPage]: https://github.com/celik-muhammed
 
 
-# [MSSQL Sample Code: Assignments](./68-Assignments/)
+# [MSSQL Sample Queries - Data Analysis: Assignments](./68-Assignments/)
 
-### [MS SQL Server Sample Databases - Queries](./62-MSSQL/)
+### [MS SQL Server Create Sample Databases - Sample Queries](./62-MSSQL/)
 
-### [SQLite Sample Databases - Queries](./61-SQLite/)
+### [SQLite Create Sample Databases - Sample Queries](./61-SQLite/)
 
 #### [MSSQL: SQL Server technical documentation](https://docs.microsoft.com/tr-tr/sql/sql-server/?view=sql-server-ver15)
 

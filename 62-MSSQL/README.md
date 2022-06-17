@@ -17,10 +17,10 @@
 
 
 
-# SQL Server Query
+# SQL Server Sample Queries
 
 00. [x] [01-Session-SELECT-DISTINCT](./01-Session-SELECT-DISTINCT.sql)
-02. [x] [02-Session-WHERE-LIMIT-ORDER BY-(AND,OR,NOT)-IN](./02-Session-WHERE-LIMIT-ORDER%20BY-(AND%2COR%2CNOT)-IN.sql)
+<!-- 02. [x] [02-Session-WHERE-LIMIT-ORDER BY-(AND,OR,NOT)-IN](./02-Session-WHERE-LIMIT-ORDER%20BY-(AND%2COR%2CNOT)-IN.sql) -->
 
 
 

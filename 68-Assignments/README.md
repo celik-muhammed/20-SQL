@@ -1,5 +1,6 @@
 01. [x] [01. RDB_SQL-Assignment-1-Manufacturer-Charlies_Chocolate_Factory.sql](./RDB_SQL-Assignment-1-Manufacturer-Charlies_Chocolate_Factory.sql)
-02. [x] [reserved](./reserved)
-03. [x] [reserved](./reserved)
+02. [x] [02. RDB_SQL-Assignment-2-SampleRetail-Purchased_Product.sql](./RDB_SQL-Assignment-2-SampleRetail-Purchased_Product.sql)
+03. [x] [03. RDB_SQL-Assignment-3-E-Commerce_Company-Conversion_Rate.sql](./RDB_SQL-Assignment-3-E-Commerce_Company-Conversion_Rate.sql)
 04. [x] [04. RDB_SQL-Assignment-4-SampleRetail-Discount-Effects.sql](./RDB_SQL-Assignment-4-SampleRetail-Discount-Effects.sql)
 04. [x] [04. RDB_SQL-Assignment-4-SampleRetail-Discount-Effects.ipynb](./RDB_SQL-Assignment-4-SampleRetail-Discount-Effects.ipynb)
+02. [x] [reserved](./reserved)

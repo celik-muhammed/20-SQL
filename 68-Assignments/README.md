@@ -4,4 +4,5 @@
 04. [x] [04. RDB_SQL-Assignment-4-SampleRetail-Discount-Effects.sql](./RDB_SQL-Assignment-4-SampleRetail-Discount-Effects.sql)
 04. [x] [04. RDB_SQL-Assignment-4-SampleRetail-Discount-Effects.ipynb](./RDB_SQL-Assignment-4-SampleRetail-Discount-Effects.ipynb)
 05. [x] [RDB_SQL-Assignment-5-Factorial-Function.sql](./RDB_SQL-Assignment-5-Factorial-Function.sql)
+05. [x] [RDB_SQL-Assignment-5-Factorial-Function.ipynb](./RDB_SQL-Assignment-5-Factorial-Function.ipynb)
 02. [x] [reserved](./reserved)

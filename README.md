@@ -4,6 +4,8 @@
 [mainPage]: https://github.com/celik-muhammed
 
 
+# [SQL Server Data Analysis Projects](./69-Data-Analysis-Projects-with-SQL-Server/)
+
 # [MSSQL Sample Queries - Data Analysis: Assignments](./68-Assignments/)
 
 ##### [MS SQL Server Create Sample Databases - Sample Queries](./62-MSSQL/)

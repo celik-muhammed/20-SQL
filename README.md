@@ -1,10 +1,5 @@
 
-00. [ ] [Go to Main Page - 00-Index-of-GitHub-Public-Projects-Repository-Logs][mainPage]
-
-[mainPage]: https://github.com/celik-muhammed
-
-
-# [SQL Server Data Analysis Projects](./69-Data-Analysis-Projects-with-SQL-Server/)
+### [Go to Home Page](https://github.com/celik-muhammed)
 
 # [MSSQL Sample Queries - Data Analysis: Assignments](./68-Assignments/)
 

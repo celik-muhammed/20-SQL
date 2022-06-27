@@ -13,4 +13,4 @@
 
 ###### [SQLite: What Is SQLite](https://www.sqlitetutorial.net/what-is-sqlite/)
 
-###### [chart: SQL-Database-Graphics](./69-SQL-Database-Graphics/)
+###### [chart: SQL-Database-Graphics](./60-SQL-Database-Graphics/)

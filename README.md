@@ -7,8 +7,6 @@
 
 ##### [SQLite Create Sample Databases - Sample Queries](./61-SQLite/)
 
-<hr>
-
 | Official Documents | Official Documents |
 | ----------- | ----------- |
 | * [Azure Data Studio - MSSQL: SQL Server](https://docs.microsoft.com/en-us/sql/azure-data-studio/?view=sql-server-ver16) | * [MSSQL: SQL Server technical documentation](https://docs.microsoft.com/tr-tr/sql/sql-server/?view=sql-server-ver15) | 

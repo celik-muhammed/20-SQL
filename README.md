@@ -7,10 +7,12 @@
 
 ##### [SQLite Create Sample Databases - Sample Queries](./61-SQLite/)
 
-###### [Azure Data Studio - MSSQL: SQL Server](https://docs.microsoft.com/en-us/sql/azure-data-studio/?view=sql-server-ver16)
+<hr>
 
-###### [MSSQL: SQL Server technical documentation](https://docs.microsoft.com/tr-tr/sql/sql-server/?view=sql-server-ver15)
+* [Azure Data Studio - MSSQL: SQL Server](https://docs.microsoft.com/en-us/sql/azure-data-studio/?view=sql-server-ver16)
 
-###### [SQLite: What Is SQLite](https://www.sqlitetutorial.net/what-is-sqlite/)
+* [MSSQL: SQL Server technical documentation](https://docs.microsoft.com/tr-tr/sql/sql-server/?view=sql-server-ver15)
 
-###### [chart: SQL-Database-Graphics](./60-SQL-Database-Graphics/)
+* [SQLite: What Is SQLite](https://www.sqlitetutorial.net/what-is-sqlite/)
+
+* [chart: SQL-Database-Graphics](./60-SQL-Database-Graphics/)

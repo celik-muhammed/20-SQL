@@ -3,9 +3,13 @@
 
 # [MSSQL Sample Queries - Data Analysis: Assignments](./68-Assignments/)
 
-##### [MS SQL Server Create Sample Databases - Sample Queries](./62-MSSQL/)
+<br>
 
-##### [SQLite Create Sample Databases - Sample Queries](./61-SQLite/)
+00. [x] [MS SQL Server Create Sample Databases - Sample Queries](./62-MSSQL/)
+
+01. [x] [SQLite Create Sample Databases - Sample Queries](./61-SQLite/)
+
+<br>
 
 | Official Documents | Official Documents |
 | ----------- | ----------- |

@@ -1,4 +1,4 @@
---https://www.codewars.com/kata/5811315e04adbbdb5000050e/train/sql
+-- https://www.codewars.com/kata/5811315e04adbbdb5000050e/train/sql
 -- Create your SELECT statement here
 SELECT 
 id,

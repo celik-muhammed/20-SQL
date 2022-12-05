@@ -4,11 +4,11 @@
 
 <br>
 
-00. [x] [MS SQL Server Create Sample Databases - Sample Queries](./62-MSSQL/)
+00. [x] [MS SQL Server Create Sample Databases - Sample Queries](./22-MSSQL/)
 
-01. [x] [PostgreSQL Sample Database - Sample Queries](./61-SQLite/)
+01. [x] [PostgreSQL Sample Database - Sample Queries](./21-SQLite/)
 
-02. [x] [SQLite Create Sample Databases - Sample Queries](./61-SQLite/)
+02. [x] [SQLite Create Sample Databases - Sample Queries](./21-SQLite/)
 
 
 

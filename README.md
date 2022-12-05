@@ -5,7 +5,7 @@
 <br>
 
 
-00. [x] [MS SQL Server Create Sample Databases - Sample Queries](./22-MSSQL/)
+00. [x] [MS SQL Server Create Sample Databases - Sample Queries](./21-MSSQL/)
 
 01. [x] [PostgreSQL Sample Database - Sample Queries](./23-PostgreSQL/)
 

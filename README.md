@@ -40,7 +40,7 @@
     <a href="https://www.sqlitetutorial.net/what-is-sqlite">SQLite: What Is SQLite</a>
   </td>
   <td>
-    <a href="./60-SQL-Database-Graphics">chart: SQL-Database-Graphics</a>
+    <a href="./20-SQL-Database-Graphics">chart: SQL-Database-Graphics</a>
   </td>
 </tr>
 </tbody>

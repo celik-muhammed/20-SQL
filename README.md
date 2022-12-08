@@ -1,5 +1,7 @@
 ### [Go to Index Page](https://github.com/celik-muhammed/00-Index-of-GitHub-Public-Projects-Repository-Logs/blob/master/README.md)
 
+<br>
+
 
 ## [hackerrank.com - Ms SQL Server](https://www.hackerrank.com/)
 

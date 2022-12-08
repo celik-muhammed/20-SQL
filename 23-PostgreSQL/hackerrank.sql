@@ -1,12 +1,16 @@
+--Weather Observation Station 7
 select distinct city
 from station
 where city like '%[a,e,i,o,u]'
 
+
+--Weather Observation Station 8
 select distinct city
 from station
-where city like '[a,e,i,o,u]%' and city like '%[a,e,i,o,u]' 
+where city like '[a,e,i,o,u]%[a,e,i,o,u]' 
 
 
+--Type of Triangle
 select 
     case
     when A+B<=C or B+C<=A or A+C<=B then "Not A Triangle"
@@ -15,3 +19,14 @@ select
     else "Scalene"
     end
 from triangles;
+
+
+--The PADS
+select CONCAT(name, "(", SUBSTRING(Occupation, 1, 1), ")")
+from OCCUPATIONS
+ORDER BY name;
+
+select CONCAT("There are a total of ", count(*), " ", LOWER(occupation), "s.")
+from occupations
+GROUP BY occupation
+ORDER BY count(*);

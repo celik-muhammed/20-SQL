@@ -29,3 +29,18 @@ select CONCAT("There are a total of ", count(*), " ", LOWER(occupation), "s.")
 from occupations
 GROUP BY occupation
 ORDER BY count(*);
+
+
+--Occupations
+select Doctor, Professor, Singer, Actor
+from 
+(
+    select  name, occupation,
+            rn = row_number() over(partition by occupation order by name) 
+    from    occupations
+) t
+pivot
+(
+    max(name) 
+    FOR occupation IN ([Doctor], [Professor], [Singer ], [Actor])
+) pt

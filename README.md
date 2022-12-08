@@ -1,4 +1,4 @@
-<h3 align="right"><a link="https://github.com/celik-muhammed/00-Index-of-GitHub-Public-Projects-Repository-Logs/blob/master/README.md">Go to Index Page</a></h3>
+<h3 align="right"><a href="https://github.com/celik-muhammed/00-Index-of-GitHub-Public-Projects-Repository-Logs/blob/master/README.md">Go to Index Page</a></h3>
 
 
 ## [hackerrank.com - Ms SQL Server](https://www.hackerrank.com/)

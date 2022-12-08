@@ -25,7 +25,6 @@ from triangles;
 select CONCAT(name, "(", SUBSTRING(Occupation, 1, 1), ")")
 from OCCUPATIONS
 ORDER BY name;
-
 select CONCAT("There are a total of ", count(*), " ", LOWER(occupation), "s.")
 from occupations
 GROUP BY occupation

@@ -1,9 +1,18 @@
 ### [Go to Index Page](https://github.com/celik-muhammed/00-Index-of-GitHub-Public-Projects-Repository-Logs/blob/master/README.md)
 
-# [MSSQL Sample Queries - Data Analysis: Assignments](./68-Assignments/)
+
+## [hackerrank.com - Ms SQL Server](https://www.hackerrank.com/)
+
+01. [HackerRank Ms SQL Server Answers](./21-MSSQL/hackerrank.sql)
+
+
+## [codewars.com - PostgreSQL](https://www.codewars.com/)
+
+01. [Codewars PostgreSQL Answers](./23-PostgreSQL/codewars.sql)
 
 <br>
 
+## Sample Databases - Sample Queries
 
 00. [x] [MS SQL Server Create Sample Databases - Sample Queries](./21-MSSQL/)
 
@@ -11,9 +20,7 @@
 
 02. [x] [SQLite Create Sample Databases - Sample Queries](./22-SQLite/)
 
-
-
-
+<br>
 
 <table align="center">
     <caption><div align='center'>Official Documents</div></caption>

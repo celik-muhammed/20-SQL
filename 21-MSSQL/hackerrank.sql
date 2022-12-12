@@ -44,3 +44,13 @@ pivot
     max(name) 
     FOR occupation IN ([Doctor], [Professor], [Singer ], [Actor])
 ) pt
+
+--Binary Tree Nodes
+SELECT N,
+    CASE
+    WHEN p IS null THEN "Root"
+    WHEN n IN (SELECT p FROM bst) THEN "Inner"
+    ELSE "Leaf"
+    END
+FROM bst
+ORDER BY 1;

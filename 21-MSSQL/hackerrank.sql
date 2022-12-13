@@ -45,6 +45,7 @@ pivot
     FOR occupation IN ([Doctor], [Professor], [Singer ], [Actor])
 ) pt
 
+
 --Binary Tree Nodes
 SELECT N,
     CASE
@@ -72,3 +73,51 @@ SELECT company_code, founder,
      WHERE company_code=c.company_code)
 FROM Company c
 ORDER BY 1;
+
+
+--Revising Aggregations - The Count Function
+SELECT COUNT(*)
+FROM city
+WHERE population >100000
+
+
+--Revising Aggregations - The Sum Function
+SELECT DISTINCT SUM(population) OVER ()
+FROM city 
+WHERE district like 'California';
+
+select sum(population)
+from city
+group by district
+having district like 'California';
+
+
+--Revising Aggregations - Averages
+select AVG(population)
+from city
+group by district
+having district like 'California';
+
+SELECT DISTINCT AVG(population) OVER ()
+FROM city 
+WHERE district like 'California';
+
+--Average Population
+SELECT FLOOR(AVG(population))
+FROM city;
+
+
+--Japan Population
+SELECT SUM(population)
+FROM city
+WHERE countrycode like "JPN";
+
+
+--Population Density Difference
+SELECT MAX(population) - MIN(population)
+
+
+
+FROM city;
+
+

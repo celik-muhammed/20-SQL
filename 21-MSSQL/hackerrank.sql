@@ -115,9 +115,16 @@ WHERE countrycode like "JPN";
 
 --Population Density Difference
 SELECT MAX(population) - MIN(population)
-
-
-
 FROM city;
 
+
+--The Blunder
+select 
+CAST(
+    CEILING(
+        AVG(CAST(salary AS FLOAT)) - 
+        AVG(CAST(REPLACE(STR(salary), "0", "") AS FLOAT))
+    ) AS INT
+) 
+from employees;
 

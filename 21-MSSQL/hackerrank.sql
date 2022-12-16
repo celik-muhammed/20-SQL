@@ -128,3 +128,40 @@ CAST(
 ) 
 from employees;
 
+
+--Top Earners
+SELECT MAX(salary * months), Count(salary * months)
+FROM employee
+WHERE salary * months = (select max(salary * months) from employee);
+
+-- SELECT salary * months, Count(*)
+-- FROM employee
+-- WHERE salary * months = (select max(salary * months) from employee)
+-- GROUP BY salary * months;
+
+-- SELECT TOP 1
+--     (SELECT MAX(salary*months) from employee),
+--     COUNT(*)
+-- FROM employee
+-- GROUP BY salary*months
+-- ORDER BY salary*months DESC;
+
+-- select concat(
+--     (select max(months*salary) from employee), ' ', 
+--     (select count(*) 
+--      from ( select rank() over (order by months*salary desc) as rnk from employee) t 
+--      where t.rnk = 1)
+-- );
+
+
+--Weather Observation Station 2
+SELECT
+    CAST(SUM(lat_n) AS NUMERIC(10, 2)),
+    CAST(SUM(long_w) AS NUMERIC(10,2))
+FROM station;
+
+
+--Weather Observation Station 13
+SELECT CAST( SUM(lat_n) AS NUMERIC(10,4) )
+FROM station
+WHERE lat_n BETWEEN 38.7880 and 137.2345; 

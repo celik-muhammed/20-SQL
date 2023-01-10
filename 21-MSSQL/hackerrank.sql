@@ -165,3 +165,11 @@ FROM station;
 SELECT CAST( SUM(lat_n) AS NUMERIC(10,4) )
 FROM station
 WHERE lat_n BETWEEN 38.7880 and 137.2345; 
+
+
+--Weather Observation Station 14
+SELECT  top 1 CAST(ROUND(LAT_N, 4) AS NUMERIC(10,4))
+FROM    station
+WHERE   LAT_N < 137.2345
+ORDER BY 1 DESC;
+

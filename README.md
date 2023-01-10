@@ -13,6 +13,12 @@
 <br>
 
 
+## [codesignal.com - MySQL](https://www.codewars.com/)
+01. [Codewars PostgreSQL Answers](./23-PostgreSQL/codesignal.sql)
+
+<br>
+
+
 ## Sample Databases - Sample Queries
 
 00. [x] [MS SQL Server Create Sample Databases - Sample Queries](./21-MSSQL/)

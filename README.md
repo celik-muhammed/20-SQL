@@ -14,7 +14,7 @@
 
 
 ## [codesignal.com - MySQL](https://www.codewars.com/)
-01. [Codewars PostgreSQL Answers](./24-MYSQL/codesignal.sql)
+01. [codesignal MYSQL Answers](./24-MYSQL/codesignal.sql)
 
 <br>
 

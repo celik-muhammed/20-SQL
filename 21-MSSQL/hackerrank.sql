@@ -173,3 +173,40 @@ FROM    station
 WHERE   LAT_N < 137.2345
 ORDER BY 1 DESC;
 
+--Weather Observation Station 15
+SELECT TOP 1 CAST(ROUND(LONG_W, 4) AS NUMERIC(10, 4))
+FROM    station
+WHERE   LAT_N < 137.2345
+ORDER BY LAT_N DESC;
+
+--Weather Observation Station 16
+SELECT TOP 1 CAST(ROUND(LAT_N, 4) AS NUMERIC(10, 4))
+FROM    station
+WHERE   LAT_N > 38.7780
+ORDER BY LAT_N;
+
+--Weather Observation Station 17
+SELECT TOP 1 CAST(ROUND(LONG_W, 4) AS NUMERIC(10, 4))
+FROM    station
+WHERE   LAT_N > 38.7780
+ORDER BY LAT_N;
+
+--Weather Observation Station 18
+SELECT  CAST(ABS(MIN(LAT_N)-MAX(LAT_N)) + ABS(MIN(LONG_W )-MAX(LONG_W )) AS DECIMAL(10, 4))
+FROM    station;
+
+--Weather Observation Station 19
+SELECT  CAST(SQRT(SQUARE(MIN(LAT_N)-MAX(LAT_N)) + SQUARE(MIN(LONG_W )-MAX(LONG_W ))) AS DECIMAL(10, 4))
+FROM    station;
+
+--Weather Observation Station 20
+SELECT  TOP 1 LAT_N
+FROM    (SELECT  TOP 50 PERCENT CAST(LAT_N AS NUMERIC(10, 4)) AS LAT_N
+        FROM    station
+        ORDER BY LAT_N) as a
+ORDER BY LAT_N DESC;
+
+SELECT  MAX(LAT_N)
+FROM    (SELECT  TOP 50 PERCENT CAST(LAT_N AS NUMERIC(10, 4)) AS LAT_N
+        FROM    station
+        ORDER BY LAT_N) as a;

@@ -1,23 +1,30 @@
 <h3 align="right"><a href="https://github.com/celik-muhammed/00-Index-of-GitHub-Public-Projects-Repository-Logs/blob/master/README.md">Go to Index Page</a></h3>
 
-
-## [hackerrank.com - Ms SQL Server](https://www.hackerrank.com/)
-01. [HackerRank Ms SQL Server Answers](./21-MSSQL/hackerrank.sql)
-
-## [leetcode.com - Ms SQL Server](https://leetcode.com/)
-01. [LeetCode Ms SQL Server Answers](./21-MSSQL/leetcode.sql)
-
-<br>
-
-
-## [codewars.com - PostgreSQL](https://www.codewars.com/)
-01. [Codewars PostgreSQL Answers](./23-PostgreSQL/codewars.sql)
-
-<br>
-
-
-## [codesignal.com - MySQL](https://www.codewars.com/)
-01. [codesignal MYSQL Answers](./24-MYSQL/codesignal.sql)
+<table align="center">
+    <caption><div align='center'>SQL Solutions</div></caption>
+<thead align='left'><tr><th colspan=2>Ms SQL Server</th></tr></thead>
+<tbody>
+<tr>
+  <td><a href="./21-MSSQL/hackerrank.sql">01. HackerRank Ms SQL Server Solutions</a></td>
+  <td><a href="./21-MSSQL/leetcode.sql">02. LeetCode Ms SQL Server Solutions</a></td>
+</tr>
+</tbody>
+<thead align='left'><tr><th colspan=2>MySQL</th></tr></thead>
+<tbody>
+<tr>
+  <td><a href="./24-MYSQL/codesignal.sql">01. Codesignal MySQL Solutions</a></td>
+</tr>
+</tbody>
+<thead align='left'><tr><th colspan=2>PostgreSQL</th></tr></thead>
+<tbody>
+<tr>
+  <td><a href="./23-PostgreSQL/codewars.sql">01. Codewars PostgreSQL Solutions</a></td>
+</tr>
+</tbody>  
+<tfoot>
+  <tr><td>draft</td></tr>
+</tfoot>
+</table>
 
 <br>
 

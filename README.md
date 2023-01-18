@@ -4,6 +4,9 @@
 ## [hackerrank.com - Ms SQL Server](https://www.hackerrank.com/)
 01. [HackerRank Ms SQL Server Answers](./21-MSSQL/hackerrank.sql)
 
+## [leetcode.com - Ms SQL Server](https://leetcode.com/)
+01. [LeetCode Ms SQL Server Answers](./21-MSSQL/leetcode.sql)
+
 <br>
 
 

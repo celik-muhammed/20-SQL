@@ -6,7 +6,7 @@
 <tbody>
 <tr>
   <td><a href="./21-MSSQL/hackerrank.sql">01. HackerRank Ms SQL Server Solutions</a></td>
-  <td><a href="./21-MSSQL/leetcode.sql">02. LeetCode Ms SQL Server Solutions</a></td>
+  <td><a href="./21-MSSQL/LeetCode_SQL Study Plan.sql">02. LeetCode Ms SQL Server Solutions</a></td>
 </tr>
 </tbody>
 <thead align='left'><tr><th colspan=2>MySQL</th></tr></thead>

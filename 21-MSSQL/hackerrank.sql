@@ -211,6 +211,7 @@ FROM    (SELECT  TOP 50 PERCENT CAST(LAT_N AS NUMERIC(10, 4)) AS LAT_N
         FROM    station
         ORDER BY LAT_N) as a;
 
+
 --Population Census
 SELECT  SUM(ci.population)
 FROM    city ci

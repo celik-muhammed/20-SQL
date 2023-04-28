@@ -218,3 +218,29 @@ FROM    city ci
 LEFT JOIN   country co
             ON ci.countrycode=co.code
 WHERE   co.continent = 'Asia';
+
+
+--African Cities
+SELECT ci.name
+FROM city ci
+LEFT JOIN country co
+    ON ci.countrycode=co.code
+-- WHERE co.continent in ("Africa");
+WHERE co.continent like "Africa";
+
+
+--Average Population of Each Continent
+-- SELECT  co.continent, 
+--         AVG(ci.population)
+-- FROM city ci
+-- JOIN country co
+--     ON ci.countrycode=co.code
+-- GROUP BY co.continent;
+
+SELECT DISTINCT co.continent, 
+                AVG(ci.population) OVER(partition by co.continent)
+FROM city ci
+JOIN country co
+    ON ci.countrycode=co.code;
+
+

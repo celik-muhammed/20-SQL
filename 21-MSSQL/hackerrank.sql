@@ -257,3 +257,29 @@ WHERE students.marks >= grades.min_mark AND students.marks <= grades.max_mark
 ORDER BY grades.grade DESC, students.name
 
 
+-- -- Top Competitors
+-- SELECT h.hacker_id, h.name
+-- FROM Hackers h
+-- JOIN (
+--   SELECT s.hacker_id, COUNT(DISTINCT s.challenge_id) AS count_challenge
+--   FROM Submissions s
+--   JOIN Challenges c ON s.challenge_id = c.challenge_id
+--   JOIN Difficulty d ON c.difficulty_level = d.difficulty_level AND s.score = d.score
+--   GROUP BY s.hacker_id
+--   HAVING COUNT(DISTINCT s.challenge_id) > 1
+-- ) AS count_challenge ON h.hacker_id = count_challenge.hacker_id
+-- ORDER BY count_challenge DESC, h.hacker_id ASC;
+
+WITH count_challenge AS (
+  SELECT s.hacker_id, COUNT(DISTINCT s.challenge_id) AS count_challenge
+  FROM Submissions s
+  JOIN Challenges c ON s.challenge_id = c.challenge_id
+  JOIN Difficulty d ON c.difficulty_level = d.difficulty_level AND s.score = d.score
+  GROUP BY s.hacker_id
+  HAVING COUNT(DISTINCT s.challenge_id) > 1
+)
+SELECT h.hacker_id, h.name
+FROM Hackers h
+JOIN count_challenge ON h.hacker_id = count_challenge.hacker_id
+ORDER BY count_challenge DESC, h.hacker_id ASC;
+

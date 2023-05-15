@@ -283,3 +283,41 @@ FROM Hackers h
 JOIN count_challenge ON h.hacker_id = count_challenge.hacker_id
 ORDER BY count_challenge DESC, h.hacker_id ASC;
 
+
+--Ollivander's Inventory
+-- SELECT  aa.id, bb.age, aa.coins_needed, aa.power
+-- FROM    WANDS AS aa
+-- JOIN    WANDS_PROPERTY AS bb 
+--         ON aa.CODE = bb.CODE
+-- JOIN    (
+--         SELECT age AS AG, MIN(coins_needed) AS MCN, power AS PW
+--         FROM WANDS AS A
+--         JOIN WANDS_PROPERTY AS B ON A.CODE = B.CODE
+--         WHERE IS_EVIL = 0
+--         GROUP BY power, age
+--         ) AS Q 
+--         ON bb.age = AG AND aa.coins_needed = MCN AND aa.power = PW
+-- ORDER BY aa.power DESC, bb.age DESC
+
+SELECT  w.id,  wp.age,  w.coins_needed,  w.power
+FROM    Wands AS w
+JOIN    Wands_Property AS wp 
+        ON w.code = wp.code
+WHERE   wp.is_evil = 0 AND w.coins_needed = (
+                                        SELECT  MIN(w2.coins_needed)
+                                        FROM    Wands AS w2
+                                        JOIN    Wands_Property AS wp2 
+                                                ON w2.code = wp.code
+                                        WHERE   w2.power = w.power AND wp2.age = wp.AGE)
+ORDER BY  w.power DESC,  wp.age DESC;
+
+
+-- Alternative QueriesDraw 
+-- The Triangle 1
+DECLARE @counter INT = 20;
+
+WHILE @counter > 0
+BEGIN
+    PRINT REPLICATE('* ', @counter)
+    SET @counter = @counter - 1;
+END

@@ -312,8 +312,49 @@ WHERE   wp.is_evil = 0 AND w.coins_needed = (
 ORDER BY  w.power DESC,  wp.age DESC;
 
 
+-- Challenges
+-- -- c_cnt = the number of challenges completed by each student
+-- SELECT  hacker_id, name, c_cnt                    
+-- FROM    (
+--         -- same_cnt = the number of students having the same c_cnt
+--         SELECT  hacker_id, name, c_cnt,
+--                 COUNT(*) OVER(PARTITION BY c_cnt) AS same_cnt,     
+--                 -- max_cnt = the maximum of c_cnt
+--                 MAX(c_cnt) OVER() AS max_cnt                
+--         FROM    (
+--                 SELECT h.hacker_id, h.name, COUNT(*) AS c_cnt
+--                 FROM Hackers h
+--                 JOIN Challenges c ON h.hacker_id = c.hacker_id
+--                 GROUP BY h.hacker_id, h.name
+--                 ) t1
+--         ) t2
+-- -- Students with same c_cnt, if their c_cnt = max_cnt, include them
+-- -- Students with same c_cnt, if their c_cnt != max_cnt, exclude them
+-- WHERE c_cnt = max_cnt OR same_cnt = 1                
+-- ORDER BY c_cnt DESC, hacker_id; 
+
+WITH t1 AS (
+    SELECT  h.hacker_id, h.name, COUNT(*) AS c_cnt
+    FROM    Hackers h
+    JOIN    Challenges c 
+            ON h.hacker_id = c.hacker_id
+    GROUP BY h.hacker_id, h.name
+),
+t2 AS (
+    SELECT hacker_id, name, c_cnt,
+           COUNT(*) OVER(PARTITION BY c_cnt) AS same_cnt,
+           MAX(c_cnt) OVER() AS max_cnt
+    FROM t1
+)
+SELECT  hacker_id, name, c_cnt
+FROM    t2
+WHERE   c_cnt = max_cnt OR same_cnt = 1
+ORDER BY c_cnt DESC, hacker_id;
+
+
+
 -- Alternative QueriesDraw 
--- The Triangle 1
+-- Draw The Triangle 1
 DECLARE @counter INT = 20;
 
 WHILE @counter > 0
@@ -321,3 +362,17 @@ BEGIN
     PRINT REPLICATE('* ', @counter)
     SET @counter = @counter - 1;
 END
+
+
+-- Draw The Triangle 2
+DECLARE @counter INT = 1;
+DECLARE @stopper INT = 20;
+
+WHILE @counter <= @stopper
+BEGIN
+    -- Code to be executed within the loop
+    PRINT REPLICATE('* ', @counter)
+    
+    -- Increment the counter
+    SET @counter = @counter + 1;
+END;

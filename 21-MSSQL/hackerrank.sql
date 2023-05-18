@@ -352,6 +352,22 @@ WHERE   c_cnt = max_cnt OR same_cnt = 1
 ORDER BY c_cnt DESC, hacker_id;
 
 
+-- Contest Leaderboard
+WITH max_scores
+AS (
+    SELECT  hacker_id, max(score) as max_score
+    FROM    submissions
+    GROUP BY hacker_id, challenge_id
+)
+SELECT  ms.hacker_id, h.name, sum(ms.max_score) as total_score
+FROM    max_scores ms 
+JOIN    hackers h 
+        ON ms.hacker_id = h.hacker_id
+GROUP BY ms.hacker_id, h.name
+HAVING  SUM(ms.max_score) <> 0
+ORDER BY total_score DESC, ms.hacker_id;
+
+
 
 -- Alternative QueriesDraw 
 -- Draw The Triangle 1

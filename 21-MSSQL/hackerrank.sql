@@ -380,6 +380,63 @@ HAVING  SUM(ms.max_score) <> 0
 ORDER BY total_score DESC, ms.hacker_id;
 
 
+-- SQL Project Planning SQL SERVER
+-- SELECT Start_Date, MIN(End_Date) AS End_Date
+-- FROM (  SELECT   b.Start_Date
+--         FROM     Projects AS a
+--         RIGHT JOIN  Projects AS b 
+--                     ON b.Start_Date = a.End_Date
+--         WHERE a.Start_Date IS NULL
+--     ) AS sd
+-- JOIN (  SELECT  a.End_Date
+--         FROM    Projects AS a
+--         LEFT JOIN   Projects AS b 
+--                     ON b.Start_Date = a.End_Date
+--         WHERE b.End_Date IS NULL
+--     ) AS ed 
+--     ON sd.Start_Date < ed.End_Date
+-- GROUP BY Start_Date
+-- ORDER BY DATEDIFF(DAY, Start_Date, MIN(End_Date)), Start_Date;
+
+WITH CTE AS (
+  SELECT Task_ID, Start_Date, End_Date,
+         DATEADD(DAY, -ROW_NUMBER() OVER (ORDER BY Start_Date), Start_Date) AS group_id
+  FROM Projects
+)
+SELECT  MIN(Start_Date) AS Start_Date, MAX(End_Date) AS End_Date
+FROM    CTE
+GROUP BY group_id
+ORDER BY DATEDIFF(DAY, MIN(Start_Date), MAX(End_Date)), MIN(Start_Date);
+
+
+-- SQL Project Planning mysql
+-- Select Start_Date, MIN(End_Date)
+-- From
+--     (Select b.Start_Date
+--     From Projects as a
+--     RIGHT Join Projects as b
+--     ON b.Start_Date = a.End_Date
+--     WHERE a.Start_Date IS NULL
+--     ) sd,
+--     (Select a.End_Date
+--     From Projects as a
+--     Left Join Projects as b
+--     ON b.Start_Date = a.End_Date
+--     WHERE b.End_Date IS NULL
+--     ) ed
+-- Where Start_Date < End_Date
+-- GROUP BY Start_Date
+-- ORDER BY datediff(MIN(End_Date), Start_Date), Start_Date
+
+SELECT MIN(Start_Date) AS Start_Date, MAX(End_Date) AS End_Date
+FROM (
+  SELECT Task_ID, Start_Date, End_Date,
+         DATE_SUB(Start_Date, INTERVAL ROW_NUMBER() OVER (ORDER BY Start_Date) DAY) AS group_id
+  FROM Projects
+) AS subquery
+GROUP BY group_id
+ORDER BY DATEDIFF(MAX(End_Date), MIN(Start_Date)), MIN(Start_Date);
+
 
 -- Alternative QueriesDraw 
 -- Draw The Triangle 1
@@ -404,3 +461,4 @@ BEGIN
     -- Increment the counter
     SET @counter = @counter + 1;
 END;
+
